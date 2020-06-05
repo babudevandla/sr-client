@@ -15,948 +15,48 @@
 	<div class="container text-center">
 		<div class=row>
 			<div class="col-md-8 ml-auto mr-auto text-center pb-2">
-				<h1 class=title>Latest Status</h1>
-				<!-- <h4>Latest collection of awesome status to express your feelings and situation on Whatsapp.</h4> -->
-				<!-- <div class="iceilinks eniceilinks">
+				<h1 class=title>${lang} Status For Whatsapp</h1>
+				<h4>Latest collection of English status to express your feelings and situation on Whatsapp.</h4>
+				<div class="iceilinks eniceilinks">
 					<a href=whatsapp-status.html
-						class="btn btn-sm btn-ilink btn-round">LATEST STATUS</a><a
-						href=english.html class="btn btn-sm btn-ilink btn-round">ENGLISH STATUS</a><a
-						href=hindi.html class="btn btn-sm btn-ilink btn-round">HINDI STATUS</a><a
-						href=punjabi.html class="btn btn-sm btn-ilink btn-round">PUNJABI STATUS</a>
-				</div> -->
+						class="btn btn-sm btn-ilink btn-round">LATEST</a><a
+						href=english.html class="btn btn-sm btn-ilink btn-round">ENGLISH</a><a
+						href=hindi.html class="btn btn-sm btn-ilink btn-round">HINDI</a><a
+						href=punjabi.html class="btn btn-sm btn-ilink btn-round">PUNJABI</a>
+				</div>
 			</div>
 		</div>
 		<div class="row dl-sec">
-			<c:forEach items="${languages}" var="language" varStatus="status">
-				<div class="col-lg-2 col-sm-6 mini" style="flex: 0 0 11.666667%;">
-				<c:set var="lang" value="${language.name}"/>  
-					<a class="bina bin" href="${contextPath}/status/${fn:toLowerCase(lang)}">
-						<i class="material-icons pen"></i><br>
-						<p>${language.name}</p>
-					</a>
+			<div class="iceilinks ml-auto mr-auto text-center pb-2">
+				<div class="blinks pt-2">
+				<c:forEach items="${categories}" var="category">
+					<a class="btn btn-sm btn-round blink binx" title='New Status'
+						href=english.html>${category.name}
+						</a>
+				</c:forEach>
 				</div>
-			</c:forEach>	
+			</div>
 		</div>
 	</div>
 </div>
 <div class="main main-raised section-light-gray">
 	<div class=container-fluid>
 		<div class=row>
-			<div class="card mt-0 rounded-top" align=center></div>
+			<div class="adsen card mt-4 rounded-top" align=center></div>
 			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>To success in life... You need two things... Ignorance and Confidence...</span>
+							<span class=getx>"A single moment of misunderstanding is so poisonous, that it makes us forget the hundred lovable moments spent together within a minute ."</span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1801 data-key=entex data-lkey=0>
+								<div class=like id=1878 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>878<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Just because I am smiling, doesnt mean my life is perfect.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1823 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>715<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>I will wait for you because honestly i don't want anyone else.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1800 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>679<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>NO love, no pain, no gain, stay Single be Happy;)</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1764 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>593<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>''Never hide your secrets from a person who can Read Your Eyes because the one who read your eyes is always expert in Reading Your Heart.''</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1795 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>588<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>My life isnt perfect but i am thankful for everything i have.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1820 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>572<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Beauty captures your attention, but personality captures your heart.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1816 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>538<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>It takes a minute to like someone, an hour to love someone, but to forget someone takes a lifetimes.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1794 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>497<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>I act like i don't care but deep inside it hurts..</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1787 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>480<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>You left without a reason, so please don't come back with an excuse.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1796 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>466<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>''Things i do in my life:happy being single, enjoy life, endless talking, and wait until there's someone who truly loves me''</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1799 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>421<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Don't be afraid of losing someone who doesn't feel lucky to have you.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1798 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>402<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>'My life did not begin with you.., But i wish my life should end with you..,</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1775 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>379<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Some people are so important in our life not because we enjoy their company. but we feel so lonely in their absence.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1792 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>378<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>The sad moment when you find an old conversation between YOU and Someone you don't talk to anymore.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1824 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>360<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Over-thinking will destroy you.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1815 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>351<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Today I Caught myself smiling for no reason then I realize I was thinking about you.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1818 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>305<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>A promise means everything But once it is broken, sorry means Nothing.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1784 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>283<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Never Love Someone At The Cost Of Your Dignity And Self Respect...!!!</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1861 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>282<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>If your ego speaks with me then my attitude replies to you.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1858 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>279<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>SINGLE because i haven't found someone who DESERVE me :-)</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1762 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>277<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>''The heart feels light when someone is in it.. but feels very heavy when someone leave it.''</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1789 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>276<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>''loneliness is a good feeling when it is created by our-self..but it is the most worst feeling when it is gifted by others!</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1793 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>259<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>My real smile comes out when i am with you ♥</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1876 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>257<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>''Never search your happiness in other , it will makes you feel none search it in yourself you will feel happy even when you are left alone''</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1790 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>256<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>I don’t treat people badly, I treat them accordingly.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1859 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>251<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>If you dont build your own dream, someone will hire you to build theirs.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1821 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>249<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Before you judge me, Make sure that you’re perfect.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1854 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>249<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Sometimes i'm single' means i'm drama free, less stressed, and i refuse to settle for less'</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1797 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>247<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>''Don't love the person who enjoys with you.. love the person who really suffer without you because, the pain of love can never be defined.'' </span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1788 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>246<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>''Some people hurt by words, some by action and some by silence. But the biggest hurt is that someone ignoring us when we value them a lot.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1780 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>233<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>I'am not single and I'am not committed..... I'm simply on reserve for who deserve my Heart.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1758 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>226<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>A smile is a curve that sets everything straight.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1405 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>216<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>i miss your smile, your face, your hugs.I miss you.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1810 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>213<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Silent people have the greatest heart.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=683 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>213<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Sometimes losing a close friend hurts worse than a heartbreak.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1863 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>208<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Dear Feelings, i need you to move on.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1726 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>203<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>There is alwayes someone who cares for you without your knowledge.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1785 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>202<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Don't worry if you're still SINGLE. God is looking at you right now saying, ''i'm saving this girl for someone special.'</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1766 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>199<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Beauty is only skin deep.Attitude is down to the bone.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1857 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>197<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>A Man who truly loves you will be angry at you for so many things, but will never leave you.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1813 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>195<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>You were most precious trophy i had, But i was the best Game you Played.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1819 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>194<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>I understand why you left But what i dont understand why im still waiting for you?</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1729 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>194<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Happiness is homemade.....</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1373 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>181<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Changing my relationship status from 'SINGLE' to 'STILL SINGLE'.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1760 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>179<span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Love is sweet when its new, but sweeter when its true.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1803 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>176<span>
+										class=likin>139<span>
 								</div>
 							</div>
 						</div>
@@ -987,16 +87,16 @@
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>Dude,you are lucky, you got her. She is YOURS. So step up, treat her right or she wont be yours for long.</span>
+							<span class=getx>My real smile comes out when i am with you ♥</span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1822 data-key=entex data-lkey=0>
+								<div class=like id=1876 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>164<span>
+										class=likin>257<span>
 								</div>
 							</div>
 						</div>
@@ -1007,16 +107,16 @@
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>One day you're going to remember me and how much i love you.. then you're gonna hate yourself for letting me go.</span>
+							<span class=getx>When your mood is upset for no reason,you're surely missing someone. </span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1782 data-key=entex data-lkey=0>
+								<div class=like id=1875 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>164<span>
+										class=likin>94<span>
 								</div>
 							</div>
 						</div>
@@ -1027,16 +127,16 @@
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>Smile and let everyone know that today, you’re a lot stronger than you were yesterday.</span>
+							<span class=getx>Sometimes you got to shut up, swallow your pride and accept that you're wrong . it's not called giving up , its called growing up .</span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1588 data-key=entex data-lkey=0>
+								<div class=like id=1874 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>162<span>
+										class=likin>42<span>
 								</div>
 							</div>
 						</div>
@@ -1047,16 +147,116 @@
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>Unhealthy relationship may cause headache, stress and a waste of your time. The cure for this is to be single.</span>
+							<span class=getx>If you don't want me , don't mess with my feelings .</span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1767 data-key=entex data-lkey=0>
+								<div class=like id=1873 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>159<span>
+										class=likin>79<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Every GIRL deserves a boy who can change her LIFE, not only her relationship status.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1872 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>64<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Because of you, I laugh a little louder, cry a lot less, and smile a lot more.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1871 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>58<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>I hate seeing you because you bring back the feelings I tried so hard to forget.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1870 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>55<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>There are Billions of people in this world, but sometimes you really need just one.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1868 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>64<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Dont blame me for leaving, blame yourself for not doing the right things to keep me.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1867 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>45<span>
 								</div>
 							</div>
 						</div>
@@ -1074,9 +274,9 @@
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1817 data-key=entex data-lkey=0>
+								<div class=like id=1865 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>156<span>
+										class=likin>54<span>
 								</div>
 							</div>
 						</div>
@@ -1087,16 +287,16 @@
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>At some point, you have to realize that some people can stay in your HEART but not in your LIFE.</span>
+							<span class=getx>I dont care who was before me, as long as I know there is nobody during me.</span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1771 data-key=entex data-lkey=0>
+								<div class=like id=1864 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>152<span>
+										class=likin>37<span>
 								</div>
 							</div>
 						</div>
@@ -1107,16 +307,176 @@
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>Being single doesn't mean you're not too good to be with the right one, it means you're just too good to be with the wrong one.</span>
+							<span class=getx>Sometimes losing a close friend hurts worse than a heartbreak.</span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1783 data-key=entex data-lkey=0>
+								<div class=like id=1863 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>152<span>
+										class=likin>208<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Never Love Someone At The Cost Of Your Dignity And Self Respect...!!!</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1861 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>282<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Don’t be afraid of being outnumbered , eagles fly alone. Pigeons flock together.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1860 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>120<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>I don’t treat people badly, I treat them accordingly.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1859 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>251<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>If your ego speaks with me then my attitude replies to you.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1858 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>279<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Beauty is only skin deep.Attitude is down to the bone.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1857 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>197<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Work for a cause not for applause, Live life to express, not to impress.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1856 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>113<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>I can’t trust someone who is friends with everyone.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1855 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>138<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Before you judge me, Make sure that you’re perfect.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1854 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>249<span>
 								</div>
 							</div>
 						</div>
@@ -1147,16 +507,396 @@
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>There’s always a person that you hate for no reason.</span>
+							<span class=getx>How he treats you is how he feels about you.</span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=304 data-key=entex data-lkey=0>
+								<div class=like id=1852 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>149<span>
+										class=likin>52<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>I'm a very private person. You don’t ask i don’t tell.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1851 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>127<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Sometimes two people have to fall apart to realize how much they need to fall back together.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1850 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>31<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>When you can tell your story and it doesn’t make you cry, that’s when you know you’ve healed.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1849 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>41<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>There’s a difference between somebody who wants you and somebody who would do anything to keep you. Remember that.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1847 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>74<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Be good enough to forgive someone, But don’t be stupid enough to trust them again.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1846 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>104<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>The bravest thing I ever did was continuing my life when I wanted to die.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1845 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>57<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>“You told me I was perfect, but you still left. I should have known my perfect wouldn’t be good enough.”</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1844 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>54<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>True friends are like burning stars; they shine brightest on the darkest nights. </span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1843 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>65<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>If you push me away I promise you, you won’t find me where you left me. My heart is big , but not big enough to deal with people, who decide to love me when it’s convenient for them.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1842 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>50<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Sadly, The only way some people will learn to appreciate you, is by losing you.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1841 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>20<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>I don’t go crazy. I am crazy. I just go normal from time to time….</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1840 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>83<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>I think I’m afraid to be happy because whenever I get too happy, something bad always happens.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1839 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>57<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>You can close your eyes to the things you don’t want to see, but you can’t close your heart to the things you don’t want to feel.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1838 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>39<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>When I miss you, I read our old conversation, smile like an idiot, listen to songs that remind me of you, Then miss you more</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1837 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>96<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>I’m sorry I was not good enough. But i tried to be.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1836 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>43<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>It’s hard to forget someone who gave you so much to remember.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1835 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>92<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Sometimes I want to treat people how they treat me But I don’t because It’s out of my character.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1833 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>61<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Sitting alone and enjoying your own company is better than being surrounded by fake people.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1832 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>61<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Sometimes it feels so good to just sit by yourself,relax and not talk to anyone.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1831 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>35<span>
 								</div>
 							</div>
 						</div>
@@ -1187,16 +927,16 @@
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>Nothing feels better than a surprise text from that person you miss.</span>
+							<span class=getx>It hurts but it’s okay because we can’t force someone to feel the same as well we feel for them.</span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1811 data-key=entex data-lkey=0>
+								<div class=like id=1829 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>147<span>
+										class=likin>49<span>
 								</div>
 							</div>
 						</div>
@@ -1207,16 +947,16 @@
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>''It hurts the most when the person that made you feel special yesterday, make you feel so unwanted today..</span>
+							<span class=getx>Sometimes you just have to stay silent because no words can explain what’s going on in your mind and heart.</span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1776 data-key=entex data-lkey=0>
+								<div class=like id=1828 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>147<span>
+										class=likin>104<span>
 								</div>
 							</div>
 						</div>
@@ -1227,42 +967,374 @@
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>Its better to just quietly miss someone rather than let them know and just get no response.</span>
+							<span class=getx>If there is no one to hold your hand put your hands in your pocket and continue your walk.</span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1807 data-key=entex data-lkey=0>
+								<div class=like id=1827 data-key=entex data-lkey=0>
 									<i class="material-icons like-color favorite_border"></i><span
-										class=likin>141<span>
+										class=likin>79<span>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="pagin exspagin">
-				<ul class="pagination pagination-rosy">
-					<li class="prev page-item"><span>PREV</span>
-					<li class="page-item active"><a class=page-link
-						href=whatsapp-status.html rel=nofollow data-page=0>1</a>
-					<li class=page-item><a class=page-link
-						href=whatsapp-status/2.html rel=nofollow data-page=1>2</a>
-					<li class=page-item><a class=page-link
-						href=whatsapp-status/3.html rel=nofollow data-page=2>3</a>
-					<li class=page-item><a class=page-link
-						href=whatsapp-status/4.html rel=nofollow data-page=3>4</a>
-					<li class=page-item><a class=page-link
-						href=whatsapp-status/5.html rel=nofollow data-page=4>5</a>
-					<li class=next><a class=page-link
-						href=whatsapp-status/2.html rel=nofollow data-page=1>NEXT</a>
-				</ul>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>I’m the type of girl who smiles to make everyone’s day. Even though I’m dying inside.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1825 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>51<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>The sad moment when you find an old conversation between YOU and Someone you don't talk to anymore.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1824 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>360<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Just because I am smiling, doesnt mean my life is perfect.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1823 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>715<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Dude,you are lucky, you got her. She is YOURS. So step up, treat her right or she wont be yours for long.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1822 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>164<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>If you dont build your own dream, someone will hire you to build theirs.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1821 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>249<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>My life isnt perfect but i am thankful for everything i have.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1820 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>572<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>You were most precious trophy i had, But i was the best Game you Played.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1819 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>194<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Today I Caught myself smiling for no reason then I realize I was thinking about you.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1818 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>305<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Its nice when someone cares about you as much as you care about them.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1817 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>156<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Beauty captures your attention, but personality captures your heart.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1816 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>538<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Over-thinking will destroy you.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1815 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>351<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>Just because you fail once doesnt mean you are gonna fail at everything.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1814 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>132<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-4 col-xl-3 sbox">
+				<div class="card cruze">
+					<div class="card-body d-flex flex-column pb-3">
+						<p class=card-description>
+							<span class=getx>A Man who truly loves you will be angry at you for so many things, but will never leave you.</span>
+						</p>
+						<div class="card-footer p-0 mt-auto">
+							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
+								<span class=texux>COPY</span>
+							</button>
+							<div class="stats ml-auto">
+								<div class=like id=1813 data-key=entex data-lkey=0>
+									<i class="material-icons like-color favorite_border"></i><span
+										class=likin>195<span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card rounded-0" align=center></div>
+		</div>
+		<div class="row pt-4 enficeilinks">
+			<div class="col-lg-12 ml-auto mr-auto text-center pb-2">
+				<hr class="hr-text m-0 my-3 bhead"
+					data-content="ENGLISH CATEGORIES">
+				<div class="blinks pt-2">
+					<a class="btn btn-sm btn-round blink binx" title='New Status'
+						href=english.html>New</a><a
+						class="btn btn-sm btn-round blink binx" title='Love Status'
+						href=love.html>Love</a><a
+						class="btn btn-sm btn-round blink binx" title='Sad Status'
+						href=sad.html>Sad</a><a class="btn btn-sm btn-round blink binx"
+						title='Alone Status' href=alone.html>Alone</a><a
+						class="btn btn-sm btn-round blink binx" title='Misss U Status'
+						href=miss-you.html>Miss U</a><a
+						class="btn btn-sm btn-round blink binx" title='Cry Status'
+						href=cry.html>Cry</a><a class="btn btn-sm btn-round blink binx"
+						title='Pain Status' href=pain.html>Pain</a><a
+						class="btn btn-sm btn-round blink binx" title='Hurt Status'
+						href=hurt.html>Hurt</a><a
+						class="btn btn-sm btn-round blink binx" title='Angry Status'
+						href=angry.html>Angry</a><a
+						class="btn btn-sm btn-round blink binx" title='Sorry Status'
+						href=sorry.html>Sorry</a><a
+						class="btn btn-sm btn-round blink binx" title='Cheat Status'
+						href=cheat.html>Cheat</a><a
+						class="btn btn-sm btn-round blink binx" title='Flirty Status'
+						href=flirty.html>Flirty</a><a
+						class="btn btn-sm btn-round blink binx" title='Breakup Status'
+						href=breakup.html>Breakup</a><a
+						class="btn btn-sm btn-round blink binx" title='Attitude Status'
+						href=attitude.html>Attitude</a><a
+						class="btn btn-sm btn-round blink binx" title='Life Status'
+						href=life.html>Life</a><a
+						class="btn btn-sm btn-round blink binx" title='Faith Status'
+						href=faith.html>Faith</a><a
+						class="btn btn-sm btn-round blink binx" title='Gym Status'
+						href=gym.html>Gym</a><a class="btn btn-sm btn-round blink binx"
+						title='Ascii Art Status' href=ascii-art.html>Art</a><a
+						class="btn btn-sm btn-round blink binx" title='Busy Status'
+						href=busy.html>Busy</a><a
+						class="btn btn-sm btn-round blink binx" title='Cute Status'
+						href=cute.html>Cute</a><a
+						class="btn btn-sm btn-round blink binx" title='Exam Status'
+						href=exam.html>Exam</a><a
+						class="btn btn-sm btn-round blink binx" title='Rain Status'
+						href=rain.html>Rain</a><a
+						class="btn btn-sm btn-round blink binx" title='Crush Status'
+						href=crush.html>Crush</a><a
+						class="btn btn-sm btn-round blink binx" title='Music Status'
+						href=music.html>Music</a><a
+						class="btn btn-sm btn-round blink binx" title='Funny Status'
+						href=funny.html>Funny</a><a
+						class="btn btn-sm btn-round blink binx" title='Short Status'
+						href=short.html>Short</a><a
+						class="btn btn-sm btn-round blink binx" title='Selfie Status'
+						href=selfie.html>Selfie</a><a
+						class="btn btn-sm btn-round blink binx" title='Single Status'
+						href=single.html>Single</a><a
+						class="btn btn-sm btn-round blink binx" title='Selfish Status'
+						href=selfish.html>Selfish</a><a
+						class="btn btn-sm btn-round blink binx" title='Thanks Status'
+						href=thanks.html>Thanks</a><a
+						class="btn btn-sm btn-round blink binx" title='Unique Status'
+						href=unique.html>Unique</a><a
+						class="btn btn-sm btn-round blink binx" title='School Status'
+						href=school.html>School</a><a
+						class="btn btn-sm btn-round blink binx" title='Friends Status'
+						href=friends.html>Friends</a><a
+						class="btn btn-sm btn-round blink binx" title='Naughty Status'
+						href=naughty.html>Naughty</a><a
+						class="btn btn-sm btn-round blink binx" title='Sisters Status'
+						href=sister.html>Sisters</a><a
+						class="btn btn-sm btn-round blink binx" title='Brothers Status'
+						href=brother.html>Brothers</a><a
+						class="btn btn-sm btn-round blink binx" title='Happiness Status'
+						href=happiness.html>Happiness</a><a
+						class="btn btn-sm btn-round blink binx" title='Emotional Status'
+						href=emotional.html>Emotional</a><a
+						class="btn btn-sm btn-round blink binx"
+						title='Devotional Status' href=devotional.html>Devotional</a><a
+						class="btn btn-sm btn-round blink binx"
+						title='Technology Status' href=technology.html>Technology</a><a
+						class="btn btn-sm btn-round blink binx"
+						title='Motivational Status' href=motivational.html>Motivational</a><a
+						class="btn btn-sm btn-round blink binx"
+						title='Heart Touching Status' href=heart-touching.html>Heart Touching</a>
+				</div>
 			</div>
 		</div>
- </div>
-</div> 
+
 
 	</jsp:body>
 </defaultTemplate:defaultDecorator>

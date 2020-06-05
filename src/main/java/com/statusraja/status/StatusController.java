@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.statusraja.enums.CategoryStatusEnum;
 import com.statusraja.ringtone.FileDetailsVo;
 import com.statusraja.ringtone.RingtoneService;
+import com.statusraja.service.GenericService;
+import com.statusraja.vo.Categories;
 import com.statusraja.vo.FilterSearchVo;
 import com.statusraja.vo.Languages;
 
@@ -26,27 +29,32 @@ public class StatusController {
 	@Autowired
 	RingtoneService ringtoneService;
 	
+	@Autowired
+	GenericService genericService;
+	
 	@GetMapping("/list")
 	public ModelAndView getStatusList(@ModelAttribute FilterSearchVo searchVo) {
 		logger.info("all text status list!....");
 		ModelAndView model = new ModelAndView("tabs/statuslist");
 		List<FileDetailsVo> fileDetailsVos = ringtoneService.getMasterDetailsList("status",searchVo);
-		List<Languages> languages=ringtoneService.getLanguageList();
+		List<Languages> languages=genericService.getLanguageList();
 		model.addObject("languages", languages);
 		model.addObject("fileDetailsVos", fileDetailsVos);
 
 		return model;
 	}
 	
-	@GetMapping("/{language}")
-	public ModelAndView getLanguage(@ModelAttribute FilterSearchVo searchVo,@PathVariable String language) {
+	@GetMapping("/{lang}")
+	public ModelAndView getLanguage(@ModelAttribute FilterSearchVo searchVo,@PathVariable String lang) {
 		logger.info("all text status list!....");
-		ModelAndView model = new ModelAndView("tabs/statuslist");
+		ModelAndView model = new ModelAndView("tabs/lang-status");
 		List<FileDetailsVo> fileDetailsVos = ringtoneService.getMasterDetailsList("status",searchVo);
-		List<Languages> languages=ringtoneService.getLanguageList();
+		List<Languages> languages=genericService.getLanguageList();
+		List<Categories> categories=genericService.getCategories(CategoryStatusEnum.TEXTSTATUS.getStatus());
 		model.addObject("languages", languages);
 		model.addObject("fileDetailsVos", fileDetailsVos);
-
+		model.addObject("lang", lang);
+		model.addObject("categories",categories);
 		return model;
 	}
 }

@@ -1,12 +1,14 @@
-package com.statusraja.ringtone;
+package com.statusraja.mongo.dao;
 
 import java.util.List;
 
+import com.statusraja.ringtone.FileDetailsVo;
+import com.statusraja.vo.Categories;
 import com.statusraja.vo.FilterSearchVo;
 import com.statusraja.vo.Languages;
 import com.statusraja.vo.RatingAndDownload;
 
-public interface RingtoneMongoDao {
+public interface GenericMongoDao {
 
 	List<FileDetailsVo> getMasterDetailsList(String type, FilterSearchVo searchVo);
 
@@ -15,5 +17,7 @@ public interface RingtoneMongoDao {
 	RatingAndDownload getFileDetaillsById(Integer id);
 
 	List<Languages> getLanguageList();
+
+	List<Categories> getCategories(String type);
 
 }

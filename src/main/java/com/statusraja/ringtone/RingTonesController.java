@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.statusraja.enums.CategoryStatusEnum;
 import com.statusraja.vo.FilterSearchVo;
 import com.statusraja.vo.RatingAndDownload;
 import com.statusraja.webdav.service.WebDavService;
@@ -39,13 +39,11 @@ public class RingTonesController {
 	public ModelAndView getRingtonesList(@ModelAttribute FilterSearchVo searchVo) {
 		logger.info("all ringtones list!....");
 		ModelAndView model = new ModelAndView("tabs/ringtones");
-		List<FileDetailsVo> fileDetailsVos = ringtoneService.getMasterDetailsList("ringtone",searchVo);
+		List<FileDetailsVo> fileDetailsVos = ringtoneService.getMasterDetailsList(CategoryStatusEnum.RINGTONE.getStatus(),searchVo);
 		model.addObject("fileDetailsVos", fileDetailsVos);
 
 		return model;
 	}
-	
-	
 
 	@GetMapping("/downloadringtone/{srid}")
 	public void downloadRingtone(@PathVariable Integer srid, @RequestParam String filePath, HttpServletRequest request,

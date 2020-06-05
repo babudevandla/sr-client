@@ -9,4 +9,6 @@ public class CollectionsConstant {
 	public static String RATINGSANDDOWNLOADS_COLLECTION		= "ratingsanddownloads" ;
 	public static String LANGUAGES		= "languages" ;
 	
+	public static String CATEGORIES		= "categories" ;
+	
 }

@@ -1,4 +1,4 @@
-package com.statusraja.ringtone;
+package com.statusraja.mongo.dao;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,16 +17,19 @@ import com.mongodb.client.MongoCursor;
 import com.statusraja.constants.CollectionsConstant;
 import com.statusraja.constants.SRConstants;
 import com.statusraja.constants.WebDavServerConstant;
+import com.statusraja.enums.SRStatusEnum;
 import com.statusraja.mongo.MongoDBUtil;
+import com.statusraja.ringtone.FileDetailsVo;
 import com.statusraja.utils.FilePathVariables;
+import com.statusraja.vo.Categories;
 import com.statusraja.vo.FilterSearchVo;
 import com.statusraja.vo.Languages;
 import com.statusraja.vo.RatingAndDownload;
 
 @Repository
-public class RingtoneMongoDaoImpl implements RingtoneMongoDao {
+public class GenericMongoDaoImpl implements GenericMongoDao {
 
-	private static final Logger logger = LoggerFactory.getLogger(RingtoneMongoDaoImpl.class);
+	private static final Logger logger = LoggerFactory.getLogger(GenericMongoDaoImpl.class);
 
 	@Autowired
 	MongoDBUtil mongoDBUtil;
@@ -83,7 +86,7 @@ public class RingtoneMongoDaoImpl implements RingtoneMongoDao {
 	private List<Bson> getAggregatepipeline(FilterSearchVo searchVo) {
 		
 		Document match=new Document();
-		match.put("status", "ACTIVE");
+		match.put("status", SRStatusEnum.ACTIVE.getName());
 		
 		Document lookupObject = new Document();
 		lookupObject.append("from", CollectionsConstant.FORMATS_COLLECTION);
@@ -214,6 +217,25 @@ public class RingtoneMongoDaoImpl implements RingtoneMongoDao {
 	}
 
 
-	
+	@Override
+	public List<Categories> getCategories(String type) {
+		List<Categories> categories = new ArrayList<>();
+		MongoCursor<Document> cursor = null;
+		MongoCollection<Document> coll = null;
+		Document match = new Document();
+		match.put("type", type);
+		coll = mongoDBUtil.getMongoCollection(CollectionsConstant.CATEGORIES);
+		cursor = coll.find(match).iterator();
+		Categories category = null;
+		while (cursor.hasNext()) {
+			Document fileDoc = cursor.next();
+			category = new Categories();
+			category.setCategoryid(fileDoc.getInteger("categoryid"));
+			category.setName(fileDoc.getString("name"));
+			category.setType(fileDoc.getString("type"));
+			categories.add(category);
+		}
+		return categories;
+	}
 
 }

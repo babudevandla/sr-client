@@ -193,14 +193,24 @@ public class FileDetailsVo implements Serializable {
 		this.actor = actor;
 	}
 
+	
+	public String getStatusContent() {
+		return statusContent;
+	}
+
+	public void setStatusContent(String statusContent) {
+		this.statusContent = statusContent;
+	}
+
 	@Override
 	public String toString() {
 		return "FileDetailsVo [srid=" + srid + ", formatid=" + formatid + ", type=" + type + ", filefullname="
 				+ filefullname + ", fileshortname=" + fileshortname + ", description=" + description + ", language="
 				+ language + ", category=" + category + ", filename=" + filename + ", file_url=" + file_url
 				+ ", filePath=" + filePath + ", extension=" + extension + ", fileStatus=" + fileStatus + ", banner_img="
-				+ banner_img + ", createddate=" + createddate + ", updateddate=" + updateddate + ", actor=" + actor
-				+ ", likes=" + likes + ", downloadcount=" + downloadcount + ", file=" + file + "]";
+				+ banner_img + ", createddate=" + createddate + ", updateddate=" + updateddate + ", statusContent="
+				+ statusContent + ", actor=" + actor + ", likes=" + likes + ", downloadcount=" + downloadcount
+				+ ", file=" + file + "]";
 	}
 
 }

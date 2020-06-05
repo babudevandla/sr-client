@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.statusraja.mongo.dao.GenericMongoDao;
+import com.statusraja.vo.Categories;
 import com.statusraja.vo.FilterSearchVo;
 import com.statusraja.vo.Languages;
 import com.statusraja.vo.RatingAndDownload;
@@ -18,7 +20,7 @@ public class RingtoneServiceImpl implements RingtoneService {
 	
 	
 	@Autowired
-	RingtoneMongoDao ringtoneMongoDao;
+	GenericMongoDao ringtoneMongoDao;
 	
 	
 	@Override
@@ -39,9 +41,6 @@ public class RingtoneServiceImpl implements RingtoneService {
 	}
 
 
-	@Override
-	public List<Languages> getLanguageList() {
-		return ringtoneMongoDao.getLanguageList();
-	}
+	
 
 }
