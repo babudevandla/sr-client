@@ -19,6 +19,7 @@ public class FileDetailsVo implements Serializable {
 	private String category;
 	private String filename;
 	private String file_url;
+	private String file_duration;
 	private String filePath;
 	private String extension;
 	private String fileStatus;
@@ -201,16 +202,24 @@ public class FileDetailsVo implements Serializable {
 	public void setStatusContent(String statusContent) {
 		this.statusContent = statusContent;
 	}
+	
+	public String getFile_duration() {
+		return file_duration;
+	}
+
+	public void setFile_duration(String file_duration) {
+		this.file_duration = file_duration;
+	}
 
 	@Override
 	public String toString() {
 		return "FileDetailsVo [srid=" + srid + ", formatid=" + formatid + ", type=" + type + ", filefullname="
 				+ filefullname + ", fileshortname=" + fileshortname + ", description=" + description + ", language="
 				+ language + ", category=" + category + ", filename=" + filename + ", file_url=" + file_url
-				+ ", filePath=" + filePath + ", extension=" + extension + ", fileStatus=" + fileStatus + ", banner_img="
-				+ banner_img + ", createddate=" + createddate + ", updateddate=" + updateddate + ", statusContent="
-				+ statusContent + ", actor=" + actor + ", likes=" + likes + ", downloadcount=" + downloadcount
-				+ ", file=" + file + "]";
+				+ ", file_duration=" + file_duration + ", filePath=" + filePath + ", extension=" + extension
+				+ ", fileStatus=" + fileStatus + ", banner_img=" + banner_img + ", createddate=" + createddate
+				+ ", updateddate=" + updateddate + ", statusContent=" + statusContent + ", actor=" + actor + ", likes="
+				+ likes + ", downloadcount=" + downloadcount + ", file=" + file + "]";
 	}
 
 }

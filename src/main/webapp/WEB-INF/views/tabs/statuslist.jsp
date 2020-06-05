@@ -15,7 +15,7 @@
 	<div class="container text-center">
 		<div class=row>
 			<div class="col-md-8 ml-auto mr-auto text-center pb-2">
-				<h1 class=title>Latest Status</h1>
+				<h1 class=title>Language Based Status</h1>
 				<!-- <h4>Latest collection of awesome status to express your feelings and situation on Whatsapp.</h4> -->
 				<!-- <div class="iceilinks eniceilinks">
 					<a href=whatsapp-status.html
@@ -30,9 +30,9 @@
 			<c:forEach items="${languages}" var="language" varStatus="status">
 				<div class="col-lg-2 col-sm-6 mini" style="flex: 0 0 11.666667%;">
 				<c:set var="lang" value="${language.name}"/>  
-					<a class="bina bin" href="${contextPath}/status/${fn:toLowerCase(lang)}">
-						<i class="material-icons pen"></i><br>
-						<p>${language.name}</p>
+					<a class="bina bin" href="${contextPath}/status/${fn:toLowerCase(lang)}" style="padding: 14px 0 14px;">
+						<i class="material-icons pen" style="font-size: 40px;color: #7ff312;"></i><br>
+						<p style="font-weight: bold;">${language.name}</p>
 					</a>
 				</div>
 			</c:forEach>	
