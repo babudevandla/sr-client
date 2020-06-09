@@ -15,9 +15,9 @@
 	<div class="container text-center">
 		<div class=row>
 			<div class="col-md-8 ml-auto mr-auto text-center">
-				<!-- <h1 class=title>Ringtones</h1> 
-				 <h4>Free download latest and best Mp3 ringtones for all Android and iPhones.</h4> -->
-				<img alt="" src="${contextPath}/image/images.jpg">
+				<h1 class=title>Ringtones</h1> 
+				 <h4>Free download latest and best Mp3 ringtones for all Android and iPhones.</h4>
+				<%-- <img alt="" src="${contextPath}/image/images.jpg"> --%>
 			</div>
 		</div>
 	</div>
@@ -39,7 +39,9 @@
 						<hr class=m-0>
 						<div class="card-footer pt-1 pb-1 px-3">
 							<a href="${contextPath}/downloadringtone/${ringtone.srid}?filePath=${ringtone.filePath}" class="text-oo" download>
-								<i class="material-icons download" rel=nofollow></i></a>
+								<i class="material-icons download" rel=nofollow></i>
+							</a>
+							<span style="color: blue;">${ringtone.file_duration}</span>
 							<div class="stats ml-auto">
 								<div class="like" id="${ringtone.srid}" data-key="ring" data-lkey="0" data-href="${contextPath}/like">
 									<i class="material-icons like-color favorite_border"></i><span

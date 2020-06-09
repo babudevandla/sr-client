@@ -32,6 +32,9 @@ public class FileDetailsVo implements Serializable {
 	private Integer likes;
 	private Integer downloadcount;
 
+	private Integer categoryid;
+	private Integer langid;
+	
 	MultipartFile file;
 
 	public Integer getSrid() {
@@ -211,6 +214,23 @@ public class FileDetailsVo implements Serializable {
 		this.file_duration = file_duration;
 	}
 
+	
+	public Integer getCategoryid() {
+		return categoryid;
+	}
+
+	public void setCategoryid(Integer categoryid) {
+		this.categoryid = categoryid;
+	}
+
+	public Integer getLangid() {
+		return langid;
+	}
+
+	public void setLangid(Integer langid) {
+		this.langid = langid;
+	}
+
 	@Override
 	public String toString() {
 		return "FileDetailsVo [srid=" + srid + ", formatid=" + formatid + ", type=" + type + ", filefullname="
@@ -219,7 +239,9 @@ public class FileDetailsVo implements Serializable {
 				+ ", file_duration=" + file_duration + ", filePath=" + filePath + ", extension=" + extension
 				+ ", fileStatus=" + fileStatus + ", banner_img=" + banner_img + ", createddate=" + createddate
 				+ ", updateddate=" + updateddate + ", statusContent=" + statusContent + ", actor=" + actor + ", likes="
-				+ likes + ", downloadcount=" + downloadcount + ", file=" + file + "]";
+				+ likes + ", downloadcount=" + downloadcount + ", categoryid=" + categoryid + ", langid=" + langid
+				+ ", file=" + file + "]";
 	}
+	
 
 }

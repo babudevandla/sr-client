@@ -36,7 +36,7 @@ public class StatusController {
 	public ModelAndView getStatusList(@ModelAttribute FilterSearchVo searchVo) {
 		logger.info("all text status list!....");
 		ModelAndView model = new ModelAndView("tabs/statuslist");
-		List<FileDetailsVo> fileDetailsVos = ringtoneService.getMasterDetailsList("status",searchVo);
+		List<FileDetailsVo> fileDetailsVos = ringtoneService.getMasterDetailsList(CategoryStatusEnum.TEXTSTATUS.getStatus(),searchVo);
 		List<Languages> languages=genericService.getLanguageList();
 		model.addObject("languages", languages);
 		model.addObject("fileDetailsVos", fileDetailsVos);
@@ -48,13 +48,32 @@ public class StatusController {
 	public ModelAndView getLanguage(@ModelAttribute FilterSearchVo searchVo,@PathVariable String lang) {
 		logger.info("all text status list!....");
 		ModelAndView model = new ModelAndView("tabs/lang-status");
-		List<FileDetailsVo> fileDetailsVos = ringtoneService.getMasterDetailsList("status",searchVo);
-		List<Languages> languages=genericService.getLanguageList();
-		List<Categories> categories=genericService.getCategories(CategoryStatusEnum.TEXTSTATUS.getStatus());
-		model.addObject("languages", languages);
+		List<Languages> languagelist=genericService.getLanguageList();
+		List<Categories> categoriesList=genericService.getCategories(CategoryStatusEnum.TEXTSTATUS.getStatus());
+		Languages language=languagelist.stream().filter(l -> l.getName().trim().equalsIgnoreCase(lang)).findFirst().orElse(null);
+		searchVo.setLangid(language.getLangid());
+		List<FileDetailsVo> fileDetailsVos = ringtoneService.getMasterDetailsList(CategoryStatusEnum.TEXTSTATUS.getStatus(),searchVo);
+		model.addObject("languages", languagelist);
 		model.addObject("fileDetailsVos", fileDetailsVos);
 		model.addObject("lang", lang);
-		model.addObject("categories",categories);
+		model.addObject("categories",categoriesList);
+		return model;
+	}
+	@GetMapping("/{lang}/{cat}")
+	public ModelAndView getLanguageSpecificCategorys(@ModelAttribute FilterSearchVo searchVo,@PathVariable String lang,@PathVariable String cat) {
+		logger.info("all text status list!....");
+		ModelAndView model = new ModelAndView("tabs/lang-status");
+		List<Languages> languagelist=genericService.getLanguageList();
+		List<Categories> categoriesList=genericService.getCategories(CategoryStatusEnum.TEXTSTATUS.getStatus());
+		Languages language=languagelist.stream().filter(l -> l.getName().trim().equalsIgnoreCase(lang)).findFirst().orElse(null);
+		Categories category=categoriesList.stream().filter(c -> c.getName().trim().equalsIgnoreCase(cat)).findFirst().orElse(null);
+		searchVo.setLangid(language.getLangid());
+		searchVo.setCategoryid(category.getCategoryid());
+		List<FileDetailsVo> fileDetailsVos = ringtoneService.getMasterDetailsList(CategoryStatusEnum.TEXTSTATUS.getStatus(),searchVo);
+		model.addObject("languages", languagelist);
+		model.addObject("fileDetailsVos", fileDetailsVos);
+		model.addObject("lang", lang);
+		model.addObject("categories",categoriesList);
 		return model;
 	}
 }

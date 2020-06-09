@@ -36,14 +36,14 @@ public class GenericMongoDaoImpl implements GenericMongoDao {
 	//private Gson 8 = new Gson();
 
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
+	@SuppressWarnings({ "unchecked" })
 	@Override
 	public List<FileDetailsVo> getMasterDetailsList(String type, FilterSearchVo searchVo) {
 		List<FileDetailsVo> filesList = new ArrayList<>();
 		MongoCollection<Document> coll = null;
 		coll = mongoDBUtil.getNestCollection(CollectionsConstant.MASTER_COLLECTION);
 		
-		List<Bson> aggregatepipeline =getAggregatepipeline(searchVo);
+		List<Bson> aggregatepipeline =getAggregatepipeline(searchVo,type);
 		
 		MongoCursor<Document> cursor =coll.aggregate(aggregatepipeline).allowDiskUse(true).iterator();
 		Document fileDoc = null;
@@ -55,6 +55,7 @@ public class GenericMongoDaoImpl implements GenericMongoDao {
 			fileDetailsVo.setFileshortname(fileDoc.getString("shortname"));
 			fileDetailsVo.setFilefullname(fileDoc.getString("fullname"));
 			fileDetailsVo.setFileStatus(fileDoc.getString("status"));
+			fileDetailsVo.setType(fileDoc.getString("type"));
 			fileDetailsVo.setCreateddate(fileDoc.getDate("createddate"));
 			
 			List<Document> formatList=(List<Document>) fileDoc.get("formatsDoc");
@@ -67,10 +68,13 @@ public class GenericMongoDaoImpl implements GenericMongoDao {
 			filePath.append(FilePathVariables.FLASH).append(formatDoc.getString("url"));
 			fileDetailsVo.setFile_url(filePath.toString());
 			fileDetailsVo.setFilePath(formatDoc.getString("url"));
+			fileDetailsVo.setStatusContent(formatDoc.getString("status_content"));
+			fileDetailsVo.setFile_duration(formatDoc.getString("file_duration"));
 			
 			List<Document> descList=(List<Document>) fileDoc.get("descriptionDoc");
 			Document descDoc=descList.get(0);
-			fileDetailsVo.setLanguage(descDoc.getString("language"));
+			fileDetailsVo.setLangid(descDoc.getInteger("language"));
+			fileDetailsVo.setCategoryid(descDoc.getInteger("category"));
 			
 			List<Document> ratingDocList=(List<Document>) fileDoc.get("ratingDoc");
 			Document ratingDoc=ratingDocList.get(0);
@@ -83,10 +87,14 @@ public class GenericMongoDaoImpl implements GenericMongoDao {
 	}
 
 
-	private List<Bson> getAggregatepipeline(FilterSearchVo searchVo) {
+	private List<Bson> getAggregatepipeline(FilterSearchVo searchVo, String type) {
 		
 		Document match=new Document();
+		if(SRConstants.strNotNull.test(type))
+			match.put("type", type);
+		
 		match.put("status", SRStatusEnum.ACTIVE.getName());
+		
 		
 		Document lookupObject = new Document();
 		lookupObject.append("from", CollectionsConstant.FORMATS_COLLECTION);
@@ -116,9 +124,14 @@ public class GenericMongoDaoImpl implements GenericMongoDao {
 		
 		//Language filter
 		if(SRConstants.objNotNull.test(searchVo)) {
-			if(SRConstants.strNotNull.test(searchVo.getLanguage())) {
+			if(searchVo.getLangid()!=null) {
 				Document langMatch=new Document();
-				langMatch.put("descriptionDoc.language", searchVo.getLanguage());
+				langMatch.put("descriptionDoc.language", searchVo.getLangid());
+				aggregatepipeline.add(new Document("$match", langMatch));
+			}
+			if(searchVo.getCategoryid()!=null) {
+				Document langMatch=new Document();
+				langMatch.put("descriptionDoc.category", searchVo.getCategoryid());
 				aggregatepipeline.add(new Document("$match", langMatch));
 			}
 		}
@@ -147,6 +160,7 @@ public class GenericMongoDaoImpl implements GenericMongoDao {
 		}
 		aggregatepipeline.add(new Document("$sort", sort));
 		logger.info("aggregatepipeline ==> "+aggregatepipeline);
+		
 		return aggregatepipeline;
 	}
 

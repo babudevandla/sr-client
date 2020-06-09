@@ -7,7 +7,9 @@ public class FilterSearchVo {
 	private String language;
 	private String actor;
 	private String topdownloads;
-
+	private Integer categoryid;
+	private Integer langid;
+	
 	public String getRecent() {
 		return recent;
 	}
@@ -48,10 +50,28 @@ public class FilterSearchVo {
 		this.topdownloads = topdownloads;
 	}
 
+	
+	public Integer getCategoryid() {
+		return categoryid;
+	}
+
+	public void setCategoryid(Integer categoryid) {
+		this.categoryid = categoryid;
+	}
+
+	
+	public Integer getLangid() {
+		return langid;
+	}
+
+	public void setLangid(Integer langid) {
+		this.langid = langid;
+	}
+
 	@Override
 	public String toString() {
 		return "FilterSearchVo [recent=" + recent + ", toprated=" + toprated + ", language=" + language + ", actor="
-				+ actor + ", topdownloads=" + topdownloads + "]";
+				+ actor + ", topdownloads=" + topdownloads + ", categoryid=" + categoryid + ", langid=" + langid + "]";
 	}
 
 }

@@ -15,11 +15,22 @@
  <div class="page-header header-small header-filter home-header">
 	<div class="container text-center">
 		<div class=row>
-			<!-- <div class="col-lg-3 col-sm-6 mini">
-				<a title="DP Images" href=whatsapp-dp.html class="bina bin"><i
-							class="material-icons image"></i><br>
+			<div class="col-lg-2 col-sm-6 mini">
+				<a title=Ringtones href="${contextPath}/ringtones" class="bine bin">
+				<i class="material-icons ringtone"></i><br>
+					<p>RINGTONES</p></a>
+			</div>
+			<div class="col-lg-2 col-sm-6 mini">
+				<a title="Text Status" href="${contextPath}/status/list" class="binc bin">
+				<i class="material-icons pen"></i><br>
+					<p>TEXT STATUS</p></a>
+			</div>
+			<!--<div class="col-lg-2 col-sm-6 mini">
+				<a title="DP Images" href="${contextPath}/dpimages/list" class="bind bin">
+				<i class="material-icons image"></i><br>
 					<p> DP IMAGES </p></a>
 			</div>
+			 
 			<div class="col-lg-3 col-sm-6 mini">
 				<a title="Image Status" href=whatsapp-image-status.html
 							class="binb bin"><i class="material-icons image"></i><br>
@@ -34,13 +45,8 @@
 				<a title="Birthday Wishes" href=birthday-wishes.html
 							class="bind bin"><i class="material-icons cake"></i><br>
 					<p>BIRTHDAY WISHES</p></a>
-			</div> -->
+			</div> 
 			<div class="col-lg-3 col-sm-6 mini">
-				<a title=Ringtones href="${contextPath}/ringtones" class="bine bin"><i
-							class="material-icons ringtone"></i><br>
-					<p>RINGTONES</p></a>
-			</div>
-			<!-- <div class="col-lg-3 col-sm-6 mini">
 				<a title="Mobile Wallpapers" href=hd-mobile-wallpaper.html
 							class="binf bin"><i
 							class="material-icons photo_size_select_actual"></i><br>
@@ -64,373 +70,32 @@
 	<div class=container-fluid>
 		<div class="row shadowing pb-4">
 			<div class=col-lg-12>
-				<hr class="hr-text mb-0" data-content="LATEST WHATSAPP STATUS">
+				<hr class="hr-text mb-0" data-content="LATEST STATUS">
 			</div>
+			<c:forEach items="${textStatuslist}" var="langStatus">
 			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
 				<div class="card cruze">
 					<div class="card-body d-flex flex-column pb-3">
 						<p class=card-description>
-							<span class=getx>"A single moment of misunderstanding
-								is so poisonous, that it makes us forget the hundred lovable
-								moments spent together within a minute ."</span>
+							<span class=getx>${langStatus.statusContent}</span>
 						</p>
 						<div class="card-footer p-0 mt-auto">
 							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
 								<span class=texux>COPY</span>
 							</button>
 							<div class="stats ml-auto">
-								<div class=like id=1878 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>139<span>
-								
-										</div>
+								<div class=like id="${langStatus.srid}" data-key="status" data-lkey="0" data-href="${contextPath}/like">
+									<i class="material-icons like-color favorite_border"></i>
+									<span class=likin>${langStatus.likes}<span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>"Life is not about who hurt you and
-								broke you down. It's about who was always there and who made
-								you smile again "</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1877 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>169<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>My real smile comes out when i am with
-								you ♥</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1876 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>257<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>When your mood is upset for no
-								reason,you're surely missing someone. </span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1875 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>94<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Sometimes you got to shut up, swallow
-								your pride and accept that you're wrong . it's not called
-								giving up , its called growing up .</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1874 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>42<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>If you don't want me , don't mess with
-								my feelings .</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1873 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>79<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Every GIRL deserves a boy who can
-								change her LIFE, not only her relationship status.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1872 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>64<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Because of you, I laugh a little
-								louder, cry a lot less, and smile a lot more.</span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=1871 data-key=entex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>58<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Life is not about who hurt you and
-								broke you down. It's about who was always there and who made
-								you smile again </span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=2521 data-key=alltex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>9<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Life is not about who hurt you and
-								broke you down. It's about who was always there and who made
-								you smile again </span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=2520 data-key=alltex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>8<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Life is not about who hurt you and
-								broke you down. It's about who was always there and who made
-								you smile again </span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=2519 data-key=alltex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>33<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Life is not about who hurt you and
-								broke you down. It's about who was always there and who made
-								you smile again </span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=2518 data-key=alltex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>8<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Life is not about who hurt you and
-								broke you down. It's about who was always there and who made
-								you smile again </span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=2517 data-key=alltex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>12<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Life is not about who hurt you and
-								broke you down. It's about who was always there and who made
-								you smile again </span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=2516 data-key=alltex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>15<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Life is not about who hurt you and
-								broke you down. It's about who was always there and who made
-								you smile again </span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=2515 data-key=alltex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>11<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 sbox">
-				<div class="card cruze">
-					<div class="card-body d-flex flex-column pb-3">
-						<p class=card-description>
-							<span class=getx>Life is not about who hurt you and
-								broke you down. It's about who was always there and who made
-								you smile again </span>
-						</p>
-						<div class="card-footer p-0 mt-auto">
-							<button class="btn btn-sm btn-coral wi60 cbutton btn-round">
-								<span class=texux>COPY</span>
-							</button>
-							<div class="stats ml-auto">
-								<div class=like id=2514 data-key=alltex data-lkey=0>
-									<i class="material-icons like-color favorite_border"></i><span
-												class=likin>10<span>
-								
-										</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+		 </c:forEach>	
 		</div>
-		<div class="row shadowing mt-5 pb-3">
+		<!-- <div class="row shadowing mt-5 pb-3">
 			<div class=col-lg-12>
 				<hr class="hr-text mb-0" data-content="LATEST DP IMAGES">
 			</div>
@@ -734,8 +399,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row shadowing mt-5 pb-3">
+		</div> -->
+		<!-- <div class="row shadowing mt-5 pb-3">
 			<div class=col-lg-12>
 				<hr class="hr-text mb-0" data-content="LATEST IMAGES STATUS">
 			</div>
@@ -1035,7 +700,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 

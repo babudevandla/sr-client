@@ -31,10 +31,9 @@
 			<div class=container>
 				<div class=navbar-translate>
 					<a class=navbar-brand href="${contextPath}/" aria-label=Home><i
-						class="material-icons home"></i><img class="lazyload logo"
-						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAYAAAAb4BS0AAAAEElEQVQImWP8////fwYoAAAp8AP+tLnfMwAAAABJRU5ErkJggg=="
-						data-src="https://static.statusqueen.in/covers/statusqueen.png"
-						alt="STATUS RAJA"></a>
+						class="material-icons home"></i>
+						<img class="lazyload logo" src="${contextPath}/images/sr_img.png" data-src="${contextPath}/image/sr_img.png"
+						alt="STATUS RAJA" style="margin-top: -30px; max-height: 114px;"></a>
 					<button type=button class=navbar-toggler data-toggle=collapse
 						aria-expanded=false data-target="#w0-collapse">
 						<span class=sr-only>Toggle navigation</span><span

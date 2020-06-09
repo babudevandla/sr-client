@@ -3376,7 +3376,8 @@ html, body {
 }
 
 .binc {
-	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%)
+	/* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%) */
+	background-image: linear-gradient(120deg, #e32865 0%, #9518b6 100%)
 }
 
 .bind {
@@ -4107,7 +4108,8 @@ div.adsen:first-of-type {
 
 @media ( min-width :992px) {
 	.bine {
-		background-image: linear-gradient(-225deg, #9efbd3 0%, #57e9f2 48%, #45d4fb 100%)
+		/* background-image: linear-gradient(-225deg, #9efbd3 0%, #57e9f2 48%, #45d4fb 100%) */
+		background-image: linear-gradient(-225deg, #201f57 0%, #494ccf 48%, #21176e 100%);
 	}
 	.binf {
 		background-image: linear-gradient(-225deg, #5271c4 0%, #b19fff 48%, #eca1fe 100%)

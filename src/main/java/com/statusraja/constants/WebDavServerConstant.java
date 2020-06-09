@@ -3,7 +3,7 @@ package com.statusraja.constants;
 public class WebDavServerConstant {
 
 	//@Value("${WEBDAV_URL}")
-	public static String WEBDAV_SERVER_URL="http://localhost:8889/webdav";
+	public static String WEBDAV_SERVER_URL="http://localhost:9001/webdav";
 	//public static String WEBDAV_SERVER_URL="http://13.127.5.53:8080/webdav";
 	public static final String HTML_IMAGE_TAG = "<img src=\"{0}\"  width=\"100\" height=\"120\">";
 	public static final String HTML_VIDEO_TAG = "<video  height='134' controls> <source src=\"{0}\" type='video/mp4' style='height: 134px;'/></video>";

@@ -8,9 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.statusraja.mongo.dao.GenericMongoDao;
-import com.statusraja.vo.Categories;
 import com.statusraja.vo.FilterSearchVo;
-import com.statusraja.vo.Languages;
 import com.statusraja.vo.RatingAndDownload;
 
 @Service
