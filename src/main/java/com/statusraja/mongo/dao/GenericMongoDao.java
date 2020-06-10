@@ -20,4 +20,6 @@ public interface GenericMongoDao {
 
 	List<Categories> getCategories(String type);
 
+	FileDetailsVo getFileDetailsById(String type, Integer srid);
+
 }

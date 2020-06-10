@@ -36,4 +36,17 @@ public class HomeController {
 		return model;
 	}
 
+	@GetMapping("/contact")
+	public ModelAndView contact() {
+		logger.info("contact page ....");
+		ModelAndView model = new ModelAndView("tabs/contact");
+		return model;
+	}
+	
+	@GetMapping("/privacy-policy")
+	public ModelAndView privacyPolicy() {
+		logger.info("privacy policy ....");
+		ModelAndView model = new ModelAndView("tabs/privacy-policy");
+		return model;
+	}
 }

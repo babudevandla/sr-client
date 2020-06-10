@@ -43,7 +43,7 @@ public class GenericMongoDaoImpl implements GenericMongoDao {
 		MongoCollection<Document> coll = null;
 		coll = mongoDBUtil.getNestCollection(CollectionsConstant.MASTER_COLLECTION);
 		
-		List<Bson> aggregatepipeline =getAggregatepipeline(searchVo,type);
+		List<Bson> aggregatepipeline =getAggregatepipeline(searchVo,type,null);
 		
 		MongoCursor<Document> cursor =coll.aggregate(aggregatepipeline).allowDiskUse(true).iterator();
 		Document fileDoc = null;
@@ -87,9 +87,12 @@ public class GenericMongoDaoImpl implements GenericMongoDao {
 	}
 
 
-	private List<Bson> getAggregatepipeline(FilterSearchVo searchVo, String type) {
+	private List<Bson> getAggregatepipeline(FilterSearchVo searchVo, String type, Integer srid) {
 		
 		Document match=new Document();
+		if(srid!=null) {
+			match.put("srid", srid);
+		}
 		if(SRConstants.strNotNull.test(type))
 			match.put("type", type);
 		
@@ -224,7 +227,7 @@ public class GenericMongoDaoImpl implements GenericMongoDao {
 			Document fileDoc = cursor.next();
 			language = new Languages();
 			language.setLangid(fileDoc.getInteger("langid"));
-			language.setName(fileDoc.getString("name"));
+			language.setName(fileDoc.getString("name").trim());
 			languages.add(language);
 		}
 		return languages;
@@ -250,6 +253,55 @@ public class GenericMongoDaoImpl implements GenericMongoDao {
 			categories.add(category);
 		}
 		return categories;
+	}
+
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public FileDetailsVo getFileDetailsById(String type, Integer srid) {
+		MongoCollection<Document> coll = null;
+		coll = mongoDBUtil.getNestCollection(CollectionsConstant.MASTER_COLLECTION);
+		
+		List<Bson> aggregatepipeline =getAggregatepipeline(null,type,srid);
+		
+		MongoCursor<Document> cursor =coll.aggregate(aggregatepipeline).allowDiskUse(true).iterator();
+		Document fileDoc = null;
+		FileDetailsVo fileDetailsVo = null;
+		while (cursor.hasNext()) {
+			fileDoc = cursor.next();
+			fileDetailsVo = new FileDetailsVo();
+			fileDetailsVo.setSrid(fileDoc.getInteger("srid"));
+			fileDetailsVo.setFileshortname(fileDoc.getString("shortname"));
+			fileDetailsVo.setFilefullname(fileDoc.getString("fullname"));
+			fileDetailsVo.setFileStatus(fileDoc.getString("status"));
+			fileDetailsVo.setType(fileDoc.getString("type"));
+			fileDetailsVo.setCreateddate(fileDoc.getDate("createddate"));
+			
+			List<Document> formatList=(List<Document>) fileDoc.get("formatsDoc");
+			Document formatDoc=formatList.get(0);
+			fileDetailsVo.setFilename(formatDoc.getString("filename"));
+			fileDetailsVo.setExtension(formatDoc.getString("extension"));
+			fileDetailsVo.setFilename(formatDoc.getString("filename"));
+			fileDetailsVo.setBanner_img(formatDoc.getString("banner_img"));
+			StringBuilder filePath=new StringBuilder(WebDavServerConstant.WEBDAV_SERVER_URL);
+			filePath.append(FilePathVariables.FLASH).append(formatDoc.getString("url"));
+			fileDetailsVo.setFile_url(filePath.toString());
+			fileDetailsVo.setFilePath(formatDoc.getString("url"));
+			fileDetailsVo.setStatusContent(formatDoc.getString("status_content"));
+			fileDetailsVo.setFile_duration(formatDoc.getString("file_duration"));
+			
+			List<Document> descList=(List<Document>) fileDoc.get("descriptionDoc");
+			Document descDoc=descList.get(0);
+			fileDetailsVo.setLangid(descDoc.getInteger("language"));
+			fileDetailsVo.setCategoryid(descDoc.getInteger("category"));
+			
+			List<Document> ratingDocList=(List<Document>) fileDoc.get("ratingDoc");
+			Document ratingDoc=ratingDocList.get(0);
+			fileDetailsVo.setLikes(ratingDoc.getInteger("likes"));
+			fileDetailsVo.setDownloadcount(ratingDoc.getInteger("downloadcount"));
+			
+		}
+		return fileDetailsVo;
 	}
 
 }

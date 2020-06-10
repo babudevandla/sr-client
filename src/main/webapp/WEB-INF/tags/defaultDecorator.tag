@@ -22,7 +22,50 @@
 <%-- <link rel="icon" type="image/png" href="${contextPath}/images/favicon.png" /> --%>
 <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,500"	rel="stylesheet"> -->
 <link href="${contextPath}/css/styles.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+@media (min-width: 1200px){
+.page-header.header-small{
+    padding: 60px 0 30px;
+}
+}
 
+.banner-header h4{
+    margin-bottom: 50px;
+}
+.search input {
+    /* padding: 73px; */
+    padding: 4px 20px;
+    border-radius: 7px 7px 0px 0px;
+    border: 0;
+    background-image: linear-gradient(to right, #48439f 0%, #8478db 19%, #6d75c7 60%, #8382dd 100%);
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+}
+.search select {
+    /* padding: 73px; */
+    padding: 8px 20px;
+    border-radius: 7px 7px 0px 0px;
+    border: 0;
+    background-image: linear-gradient(to right, #48439f 0%, #8478db 19%, #6d75c7 60%, #8382dd 100%);
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.search a {
+    /* padding: 73px; */
+    padding: 4px 20px;
+    border-radius: 7px 7px 0px 0px;
+    border: 0;
+    background-image: linear-gradient(to right, #48439f 0%, #8478db 19%, #6d75c7 60%, #8382dd 100%);
+    color: #fff;
+    font-size: 13px;
+    /* font-weight: bold; */
+    cursor: pointer;
+}
+
+</style>
 </head>
 <body>
 	<div class=wrap>
@@ -32,7 +75,7 @@
 				<div class=navbar-translate>
 					<a class=navbar-brand href="${contextPath}/" aria-label=Home><i
 						class="material-icons home"></i>
-						<img class="lazyload logo" src="${contextPath}/images/sr_img.png" data-src="${contextPath}/image/sr_img.png"
+						<img class="lazyload logo" src="${contextPath}/image/sr_img.png" data-src="${contextPath}/image/sr_img.png"
 						alt="STATUS RAJA" style="margin-top: -30px; max-height: 114px;"></a>
 					<button type=button class=navbar-toggler data-toggle=collapse
 						aria-expanded=false data-target="#w0-collapse">
@@ -96,11 +139,11 @@
 	<footer class="footer footer-white">
 		<div class=container>
 			<ul class="float-left footer-links">
-				<li><a href="privacy-policy.html">Privacy Policy</a>
-				<li><a href="sitemap.html">Site Map</a>
-				<li><a href="contact.html">Contact Us</a>
+				<li><a href="${contextPath}/privacy-policy">Privacy Policy</a>
+				<!-- <li><a href="sitemap.html">Site Map</a> -->
+				<li><a href="${contextPath}/contact">Contact Us</a>
 			</ul>
-			<ul class="social-buttons float-right">
+			<!-- <ul class="social-buttons float-right">
 				<li><a aria-label=Twitter
 					class="btn btn-just-icon btn-link btn-twitter"
 					href="https://twitter.com/MyStatusQueen"><i
@@ -113,10 +156,16 @@
 					class="btn btn-just-icon btn-link btn-pinterest"
 					href="https://in.pinterest.com/statusqueen"><i
 						class="material-icons pinterest"></i></a>
-			</ul>
+			</ul> -->
 		</div>
 	</footer>
-	<script
-		src="${contextPath}/js/minify/custom.js"></script>
+	<script src="${contextPath}/js/minify/custom.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	
+});
+</script>	
 </body>
 </html>

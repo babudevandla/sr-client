@@ -37,6 +37,10 @@
 				</div>
 			</c:forEach>	
 		</div>
+		<div class="search col-md-12 ml-auto mr-auto text-right" >
+			<a  title="RECENT" href="${contextPath}/status/list?recent=top" >RECENT</a>
+			<a  title="TOP RATED" href="${contextPath}/status/list?toprated=top" >TOP RATED</a>
+		</div>
 	</div>
 </div>
 <div class="main main-raised section-light-gray">

@@ -14,11 +14,32 @@
 <div class="page-header header-small header-filter ringtone-header">
 	<div class="container text-center">
 		<div class=row>
-			<div class="col-md-8 ml-auto mr-auto text-center">
+			<div class="col-md-8 ml-auto mr-auto text-center banner-header">
 				<h1 class=title>Ringtones</h1> 
 				 <h4>Free download latest and best Mp3 ringtones for all Android and iPhones.</h4>
 				<%-- <img alt="" src="${contextPath}/image/images.jpg"> --%>
 			</div>
+			
+		</div>
+		<div class="search col-md-12 ml-auto mr-auto text-right" >
+			<form action="${contextPath}/ringtones" method="get" id="myForm">
+				<input type="submit" name="recent" value="RECENT">
+				<input type="submit" name="toprated" value="TOPRATED">
+				<%-- <a  title="RECENT" href="${contextPath}/ringtones?" >RECENT</a>
+				<a  title="TOP RATED" href="${contextPath}/" >TOP RATED</a> --%>
+				<select name="actor" id="actorId">
+					<option value="">ACTOR</option>
+					<option value="mahesh">Mahesh</option>
+					<option value="ntr">N.T.R</option>
+				</select>
+				<select name="language" id="languageId" >
+					<option value="">LANGUAGE</option>
+					<c:forEach items="${languages}" var="language" varStatus="status">
+					    <c:set var="lang" value="${language.name}"/>  
+						<option value="${fn:toLowerCase(lang)}" style="color: black;">${lang}</option>
+					</c:forEach>
+				</select>
+			</form>	
 		</div>
 	</div>
 </div>
@@ -34,7 +55,7 @@
 							<div class=audio-link>
 								<a href="${ringtone.file_url}" title=Play class="inline-playable sm2_link" rel=nofollow></a>
 							</div>
-							<p class=audio-title>${ringtone.fileshortname}</p>
+							<p class=audio-title><a href="${contextPath}/ringtone/${ringtone.srid}">${ringtone.fileshortname} </a></p>
 						</div>
 						<hr class=m-0>
 						<div class="card-footer pt-1 pb-1 px-3">
@@ -73,5 +94,9 @@
 		</div>
 	</div>
 </div>
+
+
+
+
 </jsp:body>
 </defaultTemplate:defaultDecorator>

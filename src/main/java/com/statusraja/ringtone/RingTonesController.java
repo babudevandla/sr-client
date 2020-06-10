@@ -19,8 +19,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.statusraja.constants.SRConstants;
 import com.statusraja.enums.CategoryStatusEnum;
+import com.statusraja.service.GenericService;
 import com.statusraja.vo.FilterSearchVo;
+import com.statusraja.vo.Languages;
 import com.statusraja.vo.RatingAndDownload;
 import com.statusraja.webdav.service.WebDavService;
 
@@ -35,11 +38,22 @@ public class RingTonesController {
 	@Autowired
 	WebDavService webDavService;
 
+	@Autowired
+	GenericService genericService;
+	
 	@GetMapping("/ringtones")
 	public ModelAndView getRingtonesList(@ModelAttribute FilterSearchVo searchVo) {
 		logger.info("all ringtones list!....");
 		ModelAndView model = new ModelAndView("tabs/ringtones");
+		List<Languages> languagelist=genericService.getLanguageList();
+		if(SRConstants.strNotNull.test(searchVo.getLanguage())) {
+			Languages language=languagelist.stream().filter(l -> l.getName().trim().equalsIgnoreCase(searchVo.getLanguage())).findFirst().orElse(null);
+			searchVo.setLangid(language.getLangid());
+		}
+		
 		List<FileDetailsVo> fileDetailsVos = ringtoneService.getMasterDetailsList(CategoryStatusEnum.RINGTONE.getStatus(),searchVo);
+		
+		model.addObject("languages", languagelist);
 		model.addObject("fileDetailsVos", fileDetailsVos);
 
 		return model;
@@ -83,4 +97,13 @@ public class RingTonesController {
 		
 	}
 
+	@GetMapping("/ringtone/{srid}")
+	public ModelAndView getRingtone(@PathVariable Integer srid) {
+		logger.info("all ringtones list!....");
+		ModelAndView model = new ModelAndView("tabs/single_ringtone");
+		FileDetailsVo fileDetails = ringtoneService.getFileDetailsById(CategoryStatusEnum.RINGTONE.getStatus(),srid);
+		model.addObject("ringtone", fileDetails);
+
+		return model;
+	}
 }

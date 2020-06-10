@@ -30,6 +30,10 @@
 				</div>
 			</div>
 		</div>
+		<div class="search col-md-12 ml-auto mr-auto text-right" >
+			<a  title="RECENT" href="${contextPath}/status/${lang}?recent=top" >RECENT</a>
+			<a  title="TOP RATED" href="${contextPath}/status/${lang}?toprated=top" >TOP RATED</a>
+		</div>
 	</div>
 </div>
 <div class="main main-raised section-light-gray">

@@ -18,24 +18,30 @@ public class RingtoneServiceImpl implements RingtoneService {
 	
 	
 	@Autowired
-	GenericMongoDao ringtoneMongoDao;
+	GenericMongoDao genericMongoDao;
 	
 	
 	@Override
 	public List<FileDetailsVo> getMasterDetailsList(String type, FilterSearchVo searchVo) {
-		return ringtoneMongoDao.getMasterDetailsList(type,searchVo);
+		return genericMongoDao.getMasterDetailsList(type,searchVo);
 	}
 
 
 	@Override
 	public void updateLikes(RatingAndDownload ratingAndDownload, String type) {
-		ringtoneMongoDao.updateLikes(ratingAndDownload,type);
+		genericMongoDao.updateLikes(ratingAndDownload,type);
 	}
 
 
 	@Override
 	public RatingAndDownload getFileDetaillsById(Integer id) {
-		return ringtoneMongoDao.getFileDetaillsById(id);
+		return genericMongoDao.getFileDetaillsById(id);
+	}
+
+
+	@Override
+	public FileDetailsVo getFileDetailsById(String type, Integer srid) {
+		return genericMongoDao.getFileDetailsById(type,srid);
 	}
 
 

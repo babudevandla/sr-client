@@ -13,6 +13,8 @@ public interface RingtoneService {
 
 	RatingAndDownload getFileDetaillsById(Integer id);
 
+	FileDetailsVo getFileDetailsById(String status, Integer srid);
+
 	
 
 }
